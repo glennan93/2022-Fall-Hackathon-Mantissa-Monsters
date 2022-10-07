@@ -1,6 +1,5 @@
 import pymongo 
 from pymongo import MongoClient
-#import future frontend text field data sets here
 
 #user certificate for access to DB
 cluster = MongoClient("mongodb+srv://andrew:1234@cluster0.wxau5r6.mongodb.net/?retryWrites=true&w=majority")
