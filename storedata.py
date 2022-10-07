@@ -19,5 +19,3 @@ def submitPost(username, inputsubject, usercomments):
     post = {'name': username, 'date': date_str, 'subject': inputsubject, 'comments': usercomments}
     #make post
     collection.insert_one(post)
-
-submitPost('jessi', 'physics', 'i focused on not being bored and then my cat sat on me.')
