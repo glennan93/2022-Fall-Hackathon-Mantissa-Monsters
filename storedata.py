@@ -1,5 +1,6 @@
 import pymongo 
 from pymongo import MongoClient
+from datetime import date
 #import future frontend text field data sets here
 
 #user certificate for access to DB
@@ -10,8 +11,13 @@ db = cluster["PomodoroData"]
 collection = db["UserData"]
 
 #function to be used to add entries to database
-def submitPost(username, inputsubject, usercomments):    
+def submitPost(username, inputsubject, usercomments):
+    #get current date
+    today = date.today()
+    date_str = today.strftime('%m/%d/%Y')    
     #need to somehow get username and other info from into db post
-    post = {'_id': 0, 'name': username, 'subject': inputsubject, 'comments': usercomments}
+    post = {'name': username, 'date': date_str, 'subject': inputsubject, 'comments': usercomments}
     #make post
     collection.insert_one(post)
+
+submitPost('jessi', 'physics', 'i focused on not being bored and then my cat sat on me.')
