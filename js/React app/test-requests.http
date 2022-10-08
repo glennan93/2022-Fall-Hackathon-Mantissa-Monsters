@@ -1,0 +1,35 @@
+// Account Login Tests
+//--------------------------------------------------------------------------------------------------------
+// Add login
+http://localhost:3000/signup?username=myemail@website.com&password=test1243434343
+// Retrieve login
+http://localhost:3000/verifyLogin?username=myemail@website.com&test1243434343
+
+// Attempt to login with incorrect information (Error)
+http://localhost:3000/verifyLogin?username=@webs.com&password=test12
+
+// Delete Login using userId
+http://localhost:3000/deleteLogin?_id=6340967bb34b2e03fa139743
+// Study Entry Tests
+//--------------------------------------------------------------------------------------------------------
+//  Add study entry
+http://localhost:3000/study?subject=Computer Science&summary=Today I learned so much
+
+// Retrieve all entries (To be displayed)
+http://localhost:3000/retrieve
+
+// Retrieve by certain subject. (To be displayed)
+http://localhost:3000/retrieve?subject=Computer Science
+
+// Update an exisiting entry using its id
+http://localhost:3000/update?_id=63409207dfe9941d72328738&summary=we changed this
+
+// Update using non-existent id. (Error)
+http://localhost:3000/update?_id=61015ac80991b44b4c49eeaf&age=28&phoneNumber=12193456            
+
+//Delete an entry using its id
+http://localhost:3000/delete?_id=63409207dfe9941d72328738
+
+// Delete all entries in a given subject
+http://localhost:3000/delete?subject=Computer Science
+//--------------------------------------------------------------------------------------------------------
