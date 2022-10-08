@@ -69,11 +69,12 @@ app.get("/delete" , asyncHandler(async (req, res) => {
 
 //--------------------------------------------------------------------------------------------------------
 //Account Login Functions
+// Create a user account
 app.get("/signup", asyncHandler(async (req, res) => {
     const login = await createLogin( req.query.username, req.query.password )
      res.send(login);
  }))
-
+// Login to a user account
  app.get("/verifyLogin", asyncHandler(async (req, res) => {
     const filter = {};
     if(req.query.username !== undefined && req.query.password !== undefined ) {
@@ -84,7 +85,7 @@ app.get("/signup", asyncHandler(async (req, res) => {
 
     res.send(result);
 }));
-
+// Delete a user account
 app.get("/deleteLogin" , asyncHandler(async (req, res) => {
     const deletion = {};
     if(req.query.username !== undefined) {
