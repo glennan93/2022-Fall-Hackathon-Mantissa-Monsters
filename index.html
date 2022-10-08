@@ -18,6 +18,11 @@
     
    <div class="chart">
         <canvas id="pomodoro-chart"></canvas>
+        <label for="opening-date">Start date:</label>
+        <input type="date" id="opening-date" name="opening-date" value="2022-01-01">
+        <label for="closing-date">End date:</label>
+        <input type="date" id="closing-date" name="closing-date" value="2026-01-01">
+        <button onClick="updateChart()">Update</button>
         <script src="js/graph.js"></script>
     </div>
 </body>
