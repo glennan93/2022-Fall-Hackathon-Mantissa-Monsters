@@ -18,6 +18,10 @@
     
    <div class="chart">
         <canvas id="pomodoro-chart"></canvas>
+        <label for="opening-date">Start date:</label>
+        <input type="date" id="opening-date" name="opening-date" onchange="filterPomodorosByDate()" value="2022-01-01">
+        <label for="closing-date">End date:</label>
+        <input type="date" id="closing-date" name="closing-date" onchange="filterPomodorosByDate()" value="2026-01-01">
         <script src="js/graph.js"></script>
     </div>
 </body>
