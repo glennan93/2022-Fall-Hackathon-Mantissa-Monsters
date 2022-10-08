@@ -72,3 +72,9 @@ body {
     border: none;
     background-color: rgb(162, 162, 235);
 }
+
+.chart {
+    width: 650px;
+    margin: auto;
+}
+
