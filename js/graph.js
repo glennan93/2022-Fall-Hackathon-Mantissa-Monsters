@@ -8,7 +8,7 @@ const barMarginColors = ['rgb(255, 99, 132)', 'rgb(0, 255, 0)'];
 const data = {
     labels: xValues,
     datasets: [{
-        label: ["Pomodoros", "yo"],
+        label: "Pomodoros",
         backgroundColor: barColors,
         borderColor: barMarginColors,
         borderWidth: 2,
