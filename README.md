@@ -4,7 +4,7 @@ Group Members: Robert Thom, Andrew Glenn, Jacob Hastings & Devin Black
 
 For our project, we decided to create a program that assists users in using their time effectively while studying/working and also allows them to track their time spent on specific courses/tasks. This project was based upon the Pomodoro Technique, a time management strategy that breaks work into intervals ("pomodoros"), typically 25 minutes in length, separated by short breaks.
 
-Technologies used included HTML, CSS, Javascript, MongoDB, ...
+Technologies used included HTML, CSS, Javascript, MongoDB, Mongoose, Node.
 
 Our program main page consists of a timer, a Session Info form, and graph to visually display number of pomodoros completed for each subject/task. The program would also included a login page.
 
