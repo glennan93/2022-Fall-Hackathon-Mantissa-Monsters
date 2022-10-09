@@ -25,5 +25,19 @@
         <button onClick="updateChart()">Update</button>
         <script src="js/graph.js"></script>
     </div>
+
+    <div class="form-pop" id="form">
+        <form action="/action_page.php" class="form-container">
+            <h1>Session Info</h1>
+
+            <label for="subject"> <b>Subject:</b></label>
+            <input id="subject" type="text" placeholder="Enter Subject Info" name="subject" required>
+
+            <label for="comments"><b>Additional Comments:</b></label>
+            <input id="comments" type="text" placeholder="Add any additional comments you'd like." name="comments" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
