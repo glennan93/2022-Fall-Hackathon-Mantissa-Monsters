@@ -12,7 +12,8 @@ export default class timer {
         };
 
         this.interval = null;
-        this.remainingSeconds = 1500;
+        this.remainingSeconds = 10;
+        this.timerType = "task";
         
 
         this.updateInterfaceStartStop();
@@ -29,19 +30,24 @@ export default class timer {
 
         this.el.reset.addEventListener("click", () => {
             this.stop();
-            this.remainingSeconds = 1500;
+            this.remainingSeconds = 10;
+            this.formReset();
             this.updateInterfaceTime();
         });
         
         this.el.pomtime.addEventListener("click", () => {
             this.stop();
-            this.remainingSeconds = 1500;
+            this.remainingSeconds = 10;
+            this.timerType = "task"
+            this.formReset();
             this.updateInterfaceTime();
         });
 
         this.el.breaktime.addEventListener("click", () => {
             this.stop();
-            this.remainingSeconds = 300;
+            this.remainingSeconds = 3;
+            this.timerType = "break";
+            this.formReset();
             this.updateInterfaceTime();
         });
     }
@@ -58,6 +64,16 @@ export default class timer {
             this.updateInterfaceTime();
 
             if (this.remainingSeconds === 0) {
+                if (this.timerType === "task"){
+                    document.getElementById("subject").disabled = false;
+                    document.getElementById("comments").disabled = false;
+                    document.getElementById("form-submit").disabled = false;
+                    document.getElementsByClassName("form-container")[0].style.border = "10px solid";
+                    document.getElementsByClassName("form-container")[0].style.borderColor = "yellow";
+                    alert("Well done! Please fill out Session Info form to document your progress.");
+                } else if (this.timerType === "break"){
+                    alert ("Break is over. Let's start 25 minutes!");
+                }
                 this.stop();
             }
         }, 1000);
@@ -98,6 +114,14 @@ export default class timer {
             this.el.control.classList.add("timer__btn--pause");
             this.el.control.classList.remove("timer__btn--start");
         }
+    }
+
+    formReset(){
+        document.getElementById("subject").disabled = true;
+        document.getElementById("comments").disabled = true;
+        document.getElementById("form-submit").disabled = true;
+        document.getElementsByClassName("form-container")[0].style.border = null;
+        document.getElementsByClassName("form-container")[0].style.borderColor = null;
     }
 
     //static html for webpage
