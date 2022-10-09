@@ -1,6 +1,6 @@
 Project Name: Study Pomodoro Timer
 Group Name: Mantissa Monsters
-Group Members: Robert Thom
+Group Members: Robert Thom, Andrew Glenn
 
 For our project, we decided to create a program that assists users in using their time effectively while studying/working and also allows them to track their time spent on specific courses/tasks. This project was based upon the Pomodoro Technique, a time management strategy that breaks work into intervals ("pomodoros"), typically 25 minutes in length, separated by short breaks.
 
