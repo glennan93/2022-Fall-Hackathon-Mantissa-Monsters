@@ -70,8 +70,8 @@ function clickHandler(evt) {
         const firstPoint = points[0];
         const label = myChart.data.labels[firstPoint.index];
         const value = myChart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
-        console.log(label) // name of clicked course. Can be updated with a display function to eventually
-        // display all the pomodoros for that subject.
+        console.log(label) // name of clicked course. 
+        // Would want to update to result in the display of all the respective pomodoro data retrieved from database.
     }
 }
 
